@@ -1,0 +1,26 @@
+:root{
+    --grid-columns: 1;
+    --grid-rows: 1;
+}
+html{
+    font-size: 10px;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.grid-div-container{
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    width: 500px;
+    height: 500px;
+}
+.grid-cells{
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center
+}
+/* .grid-cells:hover{
+    background-color: rgb(27, 65, 235);
+    transition:0s;
+} */ /*Not working*/
