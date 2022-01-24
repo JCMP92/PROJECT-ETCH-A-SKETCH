@@ -17,11 +17,10 @@ function changeSize(value) {
     setSize(value)
     reloadGrid()
 }
+function restartGrid() {
+    container.innerHTML = '';
+}
 
-function reloadGrid() {
-    restartGrid()
-    gridSize(sizeValue)
-  }
 
 //CREATE DIVS / SIZE OF GRID-------------------------------------------------------------
 function gridSize(colAndRow) {
@@ -38,13 +37,13 @@ function gridSize(colAndRow) {
 gridSize(sizeValue); //Only one value, beacuse it´s a square grid (all sides have the same size)
 
 //RESTART-CLEAR BUTTON------------------------------------------------------------------
-function restartGrid() {
-    const gridDivs = container.querySelectorAll('div');
-    gridDivs.forEach(gridElem => gridElem.classList.remove('color-black'));
-}
 
+function reloadGrid() {
+    restartGrid()
+    gridSize(sizeValue)
+  }
     const clear = document.getElementById('clear');
-    clear.addEventListener('click', restartGrid);  
+    clear.addEventListener('click', reloadGrid);  
 
 //COLOR CHANGE--------------------------------------------------------------------------
 function colorBlk() {      

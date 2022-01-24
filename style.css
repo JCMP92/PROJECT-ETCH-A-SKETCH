@@ -15,6 +15,7 @@ body{
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     width: 700px;
     height: 700px;
+    box-shadow: rgb(0, 0, 0);
 }
 .grid-cells{
     border: 1px solid rgb(0, 0, 0);
