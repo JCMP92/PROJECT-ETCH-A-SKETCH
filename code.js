@@ -12,6 +12,8 @@ const container = document.querySelector('.grid-div-container');
 const sizeModifier = document.getElementById('size');
 const clear = document.getElementById('clear');
 const color = document.getElementById('base-color');
+const eachButtons = document.querySelectorAll('button');
+const commandContainer = document.getElementsByClassName('command-panel');
 const colorBtn = document.getElementById('color-picker');
 const springBtn = document.getElementById('spring');
 const summerBtn = document.getElementById('summer');
@@ -23,15 +25,20 @@ const output = document.getElementById('grid-size');
 
 
 
+
 //EVENT LISTENERS-------------------------------------------------------------------------
 sizeModifier.addEventListener('change', sizeSlider);
 color.addEventListener('change',  colorSelector);
 clear.addEventListener('click', reloadGrid); 
 colorBtn.addEventListener('click', colorMode); 
 springBtn.addEventListener('click', springMode);
+// springBtn.addEventListener('click', activeMode);
 summerBtn.addEventListener('click', summerMode);
+// summerBtn.addEventListener('click', activeMode);
 fallBtn.addEventListener('click', fallMode);
+// fallBtn.addEventListener('click', activeMode);
 winterBtn.addEventListener('click', winterMode);
+// winterBtn.addEventListener('click', activeMode);
 erase.addEventListener('click', eraseMode);
 
 
@@ -55,7 +62,7 @@ erase.addEventListener('click', eraseMode);
     }
     function reloadGrid() {
         restartGrid()
-        gridSize(sizeValue)
+        gridSize(sizeValue)        
     }
         
 
@@ -117,11 +124,13 @@ function eraseMode() {
         output.innerHTML = this.value;
       }
 
+
 //COLOR CHANGER-------------------------------------------------------------------------
     function gridColors(e) {
         if (chooseMode === 'color') {
             e.target.style.backgroundColor = colorValue;
         } else if (chooseMode === 'erase') {
+            this.classList.add('active');
             e.target.style.backgroundColor = '#FFFFFF';
         }else if (chooseMode === 'spring') {
             const colors = ['#CCF6C8', '#FAFCC2', '#F6D6AD', '#F9C0C0'];
@@ -142,3 +151,16 @@ function eraseMode() {
         chooseMode   = newMode;
     };
 
+//ACTIVE BUTTON--------------------------------------------------------------------------  
+        for (let i = 0; i < eachButtons.length; i++){
+            eachButtons[i].addEventListener("click", function(){
+                (document.querySelector('.active')) ? document.querySelector('.active').classList.remove('active') : '';
+                this.classList.add('active');
+            });
+        
+        };
+
+//START----------------------------------------------------------------------------------
+window.onload = () => {
+    colorBtn.classList.add('active');
+}        
