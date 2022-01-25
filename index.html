@@ -7,30 +7,49 @@
     <title>Document</title>
     <script src="code.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Source+Code+Pro:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="title">Etch-a-Sketch</h1>
-    <div class="command-panel">
+
+    <h1 class="title">ETCH-A-SKETCH</h1>
+
+    <div class="container">
 
         <label for="size">Size</label>
         <input type="range" id="size" class="commands" name="size" min="16" max="64" value="16">
 
-        <input type="color" id="base-color" name="base-color" value="#000000">
-        <button id="color-picker" name="color-picker">Color</button>
+    </div>   
 
-        <button id="spring" name="spring">Spring</button>
+    <div class="grid-div-container"></div>
 
-        <button id="summer" name="summer">Summer</button>
+    <div class="command-panel">
 
-        <button id="fall" name="fall">Fall</button>
+            <button id="color-picker" class="color-btn" name="color-picker">Color<input type="color" id="base-color" name="base-color" value="#000000"></button>
 
-        <button id="winter" name="winter">Winter</button>
+            <button id="spring" class="color-btn" name="spring">Spring</button>
 
-        <button id="erase" name="erase">Eraser</button>
+            <button id="summer" class="color-btn" name="summer">Summer</button>
 
-        <button id="clear" name="clear" class="commands">Clear</button>
+            <button id="fall" class="color-btn" name="fall">Fall</button>
+
+            <button id="winter" class="color-btn" name="winter">Winter</button>
+
+            <button id="erase" class="color-btn" name="erase">Eraser</button>
+
+            <button id="clear" class="color-btn" name="clear" class="commands">Clear</button>
 
     </div>
-    <div class="grid-div-container"></div>
+
+<footer class="page-end">
+
+    <p>Coded by Juan Montes-Pesquera</p>
+
+</footer>
+
 </body>
 </html>
