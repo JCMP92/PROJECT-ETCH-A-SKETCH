@@ -18,6 +18,8 @@ const summerBtn = document.getElementById('summer');
 const fallBtn = document.getElementById('fall');
 const winterBtn = document.getElementById('winter');
 const erase = document.getElementById('erase');
+const slider = document.getElementById('size');
+const output = document.getElementById('grid-size');
 
 
 
@@ -105,11 +107,15 @@ function winterMode() {
 };
 
 //COLOR WHITE (ERASER)------------------------------------------------------------------
-    function eraseMode() {
-        setMode('erase');
-    };
+function eraseMode() {
+    setMode('erase');
+};
 
-
+//SLIDER VALUES-------------------------------------------------------------------------
+    output.innerText = slider.value;
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
 
 //COLOR CHANGER-------------------------------------------------------------------------
     function gridColors(e) {

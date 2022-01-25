@@ -19,17 +19,9 @@ h1{
     font-size: 5rem;
     font-family: 'Righteous', cursive;
 }
-.container{
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    width: 70%;
-}
 .command-panel{
     display: flex;
-    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .color-btn{
     margin: 0 1rem;
@@ -37,6 +29,11 @@ h1{
     font-family: 'Source Code Pro', monospace;
     border: none;
     border-radius: 0.5rem;
+    background-color: rgb(245, 245, 245);
+}
+.color-btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(216, 216, 216);
 }
 .grid-div-container{
     display: grid;
@@ -53,5 +50,47 @@ h1{
     background-color: rgb(255, 255, 255);
 } 
 .page-end{
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
+
+/* CUSTOM RANGE INPUT */
+.slidecontainer{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.slider{
+    -webkit-appearance: none;  /* This overrides the default CSS styles */
+    appearance: none;
+    width: 30%;
+    height: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: rgb(216, 216, 216);
+    outline: none;
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* This overrides the default look */
+    appearance: none;
+    width: 1.5rem; 
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgb(39, 129, 247); 
+    cursor: pointer; /* Cursor on hover */
+  }
+  .slider::-moz-range-thumb {
+    width: 1.5rem; 
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgb(39, 129, 247); 
+    cursor: pointer; /* Cursor on hover */
+  }

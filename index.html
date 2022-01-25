@@ -18,32 +18,32 @@
 
     <h1 class="title">ETCH-A-SKETCH</h1>
 
-    <div class="container">
+    <div class="command-panel">
 
-        <label for="size">Size</label>
-        <input type="range" id="size" class="commands" name="size" min="16" max="64" value="16">
+        <button id="color-picker" class="color-btn" name="color-picker">Color<input type="color" id="base-color" name="base-color" value="#000000"></button>
 
-    </div>   
+        <button id="spring" class="color-btn" name="spring">Spring</button>
+
+        <button id="summer" class="color-btn" name="summer">Summer</button>
+
+        <button id="fall" class="color-btn" name="fall">Fall</button>
+
+        <button id="winter" class="color-btn" name="winter">Winter</button>
+
+        <button id="erase" class="color-btn" name="erase">Eraser</button>
+
+        <button id="clear" class="color-btn" name="clear" class="commands">Clear</button>
+
+    </div>
 
     <div class="grid-div-container"></div>
 
-    <div class="command-panel">
+    <div class="slidecontainer">
 
-            <button id="color-picker" class="color-btn" name="color-picker">Color<input type="color" id="base-color" name="base-color" value="#000000"></button>
+        <label for="size">Size <span id="grid-size"></span></label>
+        <input type="range" id="size" class="slider" name="size" min="16" max="64" value="16">
 
-            <button id="spring" class="color-btn" name="spring">Spring</button>
-
-            <button id="summer" class="color-btn" name="summer">Summer</button>
-
-            <button id="fall" class="color-btn" name="fall">Fall</button>
-
-            <button id="winter" class="color-btn" name="winter">Winter</button>
-
-            <button id="erase" class="color-btn" name="erase">Eraser</button>
-
-            <button id="clear" class="color-btn" name="clear" class="commands">Clear</button>
-
-    </div>
+    </div>   
 
 <footer class="page-end">
 
