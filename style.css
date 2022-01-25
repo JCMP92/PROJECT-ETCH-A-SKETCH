@@ -15,11 +15,7 @@ body{
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     width: 700px;
     height: 700px;
-    box-shadow: rgb(0, 0, 0);
-}
-.grid-cells{
-    border: 0.5px solid rgb(0, 0, 0);
-    text-align: center
+    box-shadow: 5px 10px 18px #888888;
 }
 .color-black{
     background-color: rgb(0, 0, 0);
